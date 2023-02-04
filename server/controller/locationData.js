@@ -4,18 +4,18 @@ const { json } = require("express");
 
 
 exports.findLocations = async (req, res) => {
+    console.log(req.body.query)
+    const search = req.body.query;
     const params = {
         api_key: process.env.API_KEY,
-        q: "coffee Austin TX 78747",
+        q: search,
         google_domain: "google.com",
-        ll: "@40.7455096,-74.0083012,14z",
         type: "search",
         hl: "en"
     };
     try {
         // Show result as JSON
         results = await getJson("google_maps", params);
-        console.log(results);
         return res.json(results);
     } catch(e) {
         console.log(e);

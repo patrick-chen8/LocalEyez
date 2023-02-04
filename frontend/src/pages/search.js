@@ -4,44 +4,62 @@ import React from 'react';
 class Search extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {query: ""};
+        this.state = {
+            query: "",
+            location: ""
+        };
     
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleInputChange(event) {    
+        this.setState({
+            query: event.target.value
+        });
+    }
 
     async handleSubmit(e) {
         e.preventDefault();
         window.alert("Search was entered");
+
+        const search = {
+            query: this.state.query
+        }
 
         const response = await fetch("http://localhost:5000/location", {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
             },
-            body: JSON.stringify(this.state.input),
+            body: JSON.stringify(search),
         })
         .catch(error => {
             window.alert(error);
             return;
         });
 
-
+        
         const record = await response.json();
-        console.log(record);
+        console.log(record)
+        this.setState({
+            location: JSON.stringify(record)
+        });
+        this.createSession();
+    }
+
+    createSession(event) {
+        sessionStorage.setItem("location", this.state.location)
+        console.log(sessionStorage.getItem("location"))
     }
 
     render() {
         return (
-            <form onSubmit = {this.handleSubmit}>
-                <label>
+                <form class="form" onSubmit={this.handleSubmit}>
                     Location:
-                    <input type="text" id="input" name="input"/>
-                </label>
-                <input className="submit" type="submit" value="Search"/>
-
-                <h2>Updated: {this.state.input}</h2>
-            </form>
+                    <input class="searchBar" type="search"  id="search" name="search" value={this.state.query} onChange={this.handleInputChange}></input>
+                    <button class="submit" type="submit" value="Search">Search</button>
+                </form>
         );
     }
 }
