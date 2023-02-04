@@ -101,28 +101,6 @@ exports.updatePassword = async (req, res) => {
     }
 };
 
-// exports the changePassword function
-exports.changeForgetPassword = async (req, res) => {
-    // takes email and new password input from frontend
-    let checkEmail = {email: req.body.email};
-    let newPass = req.body.password;
-
-    try {
-        // finds user with given email and updates their password with the new password
-        let user = await User.findOne(checkEmail);
-        user.password = newPass;
-
-        // saves the information in the database
-        await user.save();
-
-        return res.json();
-        
-    } catch(e) {
-        console.log(e);
-        return res.status(404).json();
-    }
-}
-
 // exports the find all users function
 exports.findAllUsers = async (req, res) => {
     try {
