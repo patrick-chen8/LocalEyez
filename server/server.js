@@ -27,6 +27,7 @@ database.once('connected', () => {
 app.use(cors());
 app.use(express.json());
 app.use(require("./routes/users"));
+app.use(require("./routes/locationData"));
 
 
 // once connection is established and server has been hosted at port 5000, set app to listen at the port

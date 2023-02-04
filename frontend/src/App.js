@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import './styles.css'
+import Search from './pages/search'
 
-const App = () => {
+
+export default function App() {
+
     return (
-        <>
-        </>
+        <Search />
     );
-};
- 
-export default App;
+}
