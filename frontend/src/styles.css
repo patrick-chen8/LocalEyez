@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    background-color: #24252A;
+    color: white;
+}
+
+input[type=submit] {
+    background-color: white;
+    color: black;
+}
+
+body {
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: lightgray;
+}
+
+li, a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+a {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(2, 119, 159);
+    transition: all 0.3s ease 0s;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: lightgray;
+}
+
+.logo {
+    cursor: pointer;
+    width: 4%;
+    border-radius: 50%;
+    margin-right: 8px;
+    /*margin-right: auto;*/
+}
+
+.siteName {
+    margin-right: auto;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.siteName:hover {
+    color: white;
+}
+
+.nav_links {
+    list-style: none;
+    white-space: nowrap ;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.createAccount *, .login *, .loginPrompt * {
+    background-color: rgb(208, 206, 206);
+    color: black;
+}
+
+.loginPrompt *{
+    text-align: center;
+}
+
+.createAccount, .login, .loginPrompt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 600px;
+    background-color: rgb(208, 206, 206);
+    color: black;
+    border-radius: 5%;
+}
+
+.forgotPass, .newAccount {
+    color: black;
+    padding-top: 12px;
+    margin: 0;
+}
+
+.textfield, .smalltextfield, .chooseAnother{
+    background-color: #e9ebec;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    border-radius: 5px;
+    color: black;
+}
+
+.textfield:focus-visible, .searchBar:focus-visible .select:focus-visible *:focus-visible, button:hover {
+    border-color: lightskyblue;
+    outline: none;
+}
+
+.search {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar {
+    background-color: white;
+    width: 350px;
+    height: 40px;
+    text-align: left;
+    padding-left: 7px;
+    border-style: solid; 
+    border-width: 4px;
+    border-color: darkgray;
+    border-radius: 8px;
+    color: black;
+}
+
+.searchLine, .searchLineHome , .promoResult {
+    display: flex;
+    align-items: center;
+}
+
+.promoResult * {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.searchButton {
+    cursor: pointer;
+    color: black;
+    margin-left: 10px;
+    background-color: rgb(245, 241, 241);
+    border-style: solid; 
+    border-width: 2px;
+    border-color: white;
+    border-radius: 8px;
+}
+
+.movieList {
+    border-style: solid; 
+    border-width: 0px 0px 2px 0px;
+    border-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieResult {
+    border-style: solid; 
+    border-width: 2px 0px 0px 0px;
+    border-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.movieResult * {
+    color: white;
+}
+
+.promoPoster {
+    width: 100px;
+    height: 145px;
+}
+
+.resultInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 45px;
+}
+
+select {
+    background-color: #e9ebec;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    border-radius: 5px;
+}
+
+.trailerStrip, .movieStrip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.homeTrailer{
+    --size: 250px;
+    --aspect-ratio: 1.7;
+    width: var(--size);
+    height: calc(var(--size) / var(--aspect-ratio));
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #e9ebec;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.arrowButton {
+    font-weight: 900;
+}
+
+.homeSection {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.homeSection h2 {
+    padding-left: 45px;
+    padding-bottom: 10px;
+}
+
+.promoHome {
+    width: 150px;
+    height: 210px;
+}
+
+.movieElement {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    padding: 18px;
+}
+
+.smalltextfield {
+    width: 40%;
+}
+
+.detailsTop, .bookMovie {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.detailsPoster {
+    --size: 250px;
+    --aspect-ratio: 0.6897;
+    width: var(--size);
+    height: calc(var(--size) / var(--aspect-ratio));
+
+}
+
+.detailsTrailer{
+    --size: 500px;
+    --aspect-ratio: 1.7;
+    width: var(--size);
+    height: calc(var(--size) / var(--aspect-ratio));
+    margin-left: 80px;
+    margin-right: 10px;
+
+}
+
+.detailsTitle, .bookTitle {
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.detailsBottom {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 80px;
+}
+
+.detailHeading {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bookPoster {
+    --size: 200px;
+    --aspect-ratio: 0.6897;
+    width: var(--size);
+    height: calc(var(--size) / var(--aspect-ratio));
+}
+
+.bookMovie {
+    display: flex;
+    align-items: center;
+}
+
+.bookInfo {
+    padding-left: 60px;
+}
+
+.pageTitle {
+    margin: auto;
+    text-align: center;
+}
+
+.loginPrompt {
+
+}
+
+.loginPromptTitle {
+    font-size: 20px;
+}
+
+.selectSeat, .orderSummary, .orderHistory, .pastOrder, .manageUsers {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.seatSelector {
+    margin: 20px 0px;
+}
+
+.row, .letterRow {
+    display: flex;
+    margin: auto;
+}
+
+.seat {
+    cursor: pointer;
+    padding-left: 80px;
+}
+
+.rowTitle {
+    margin-right: 15.5px;
+}
+
+#row10 {
+    margin-right: 10px;
+}
+
+.spacer {
+    height: 30px;
+}
+
+.letterRow {
+    margin-left: 47px;
+}
+
+.columnTitle {
+    margin-right: 5.8px;
+}
+
+.seatContainer input[type=checkbox] {
+    /*opacity: 0;*/
+
+  }
+
+.youthLabel {
+    margin-right: 4px;
+}
+
+.allTickets {
+    border-style: solid;
+    border-width: 0.5px 0px 0.5px 0px;
+    border-color: lightgray;
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+.ticket {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0.5px 0px 0.5px 0px;
+    border-color: lightgray;
+    width: 100vw;
+    align-items: center;
+    padding-left: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ticketPoster {
+    --size: 100px;
+    --aspect-ratio: 0.6897;
+    width: var(--size);
+    height: calc(var(--size) / var(--aspect-ratio));
+}
+
+.ticketInfo {
+    margin-left: 30px;
+}
+.ticketLeft, .ticketRight {
+    display: flex;
+    align-items: center;
+}
+
+.ticketRight {
+    margin-right: 20px;
+}
+
+.qty {
+    margin-right: 10px;
+}
+
+.ticketPrice {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.ticketItemInfo {
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.orderBotttom {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkoutButton {
+    border-style: solid;
+    border-width: 1px 1px;
+    border-color: lightgray;
+}
+
+#qty {
+    width: 30px;
+    text-align: center;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.checkoutPay {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.checkoutPayTitle {
+    font-size: 22px;
+}
+
+.chooseAnother{
+    font-size: 12px;
+}
+
+.defaultCard {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.bookingNumber, .emailVerify {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.bookingDetails {
+    margin-top: 35px;
+}
+
+.paymentDetails {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.pastOrder {
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: lightgray;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.allTicketsPast {
+    border-style: solid;
+    border-width: 0.5px 0px 0.5px 0px;
+    border-color: lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.historyTitle {
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.manageUsersDetails {
+    align-items: left;
+    margin-top: 30px;
+}
+
+.manageMovies {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.manageMoviesDetails {
+    margin-left: 200px;
+    margin-top: 40px;
+}
+
+.searchLineHome, .searchLineHome * {
+    width: 50%;
+    height: 30%;
+}
+
+.searchLineHome {
+    margin-left: 20px;
+}
+
+.searchLineHome button {
+    font-size: 12px;
+    width: 15%;
+}
+
+.browseBar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.square {
+    height: 13px;
+    width: 13px;
+    background-color: rgb(0, 0, 0);
+}
+
